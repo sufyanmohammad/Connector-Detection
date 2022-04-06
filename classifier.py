@@ -6,9 +6,9 @@ from tensorflow.keras.applications.resnet50 import preprocess_input
 from tensorflow.keras.preprocessing.image import load_img, img_to_array
 
 
-print('Loading Model..')
-model = tf.keras.models.load_model(os.path.join(lc.MODEL_DIR, lc.MODEL_FILE))
-model.trainable = False
+# print('Loading Model..')
+# model = tf.keras.models.load_model(os.path.join(lc.MODEL_DIR, lc.MODEL_FILE))
+# model.trainable = False
 
 
 def allowed_file(filename):
