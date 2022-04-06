@@ -34,6 +34,7 @@ def make_prediction(filename):
     print('Filename is ', filename)
     full_path = os.path.join(lc.OUTPUT_DIR, filename)
     test_data = prepare_image(full_path)
-    predictions = model.predict(test_data)
-    print(predictions)
-    return lc.CLASSES[np.argmax(predictions[0])]
+#     predictions = model.predict(test_data)
+#     print(predictions)
+    predictions = "connector"
+    return predictions
