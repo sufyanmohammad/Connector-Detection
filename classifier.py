@@ -2,8 +2,8 @@ import os
 import tensorflow as tf
 import numpy as np
 import local_config as lc
-from tensorflow.keras.applications.resnet50 import preprocess_input
-from tensorflow.keras.preprocessing.image import load_img, img_to_array
+# from tensorflow.keras.applications.resnet50 import preprocess_input
+# from tensorflow.keras.preprocessing.image import load_img, img_to_array
 
 
 # print('Loading Model..')
@@ -19,12 +19,12 @@ def allowed_file(filename):
     return ('.' in filename) and (filename.rsplit('.', 1)[1].lower() in allowed_extensions)
 
 
-def prepare_image(image_path):
-    """
-    Loads image from the given `image_path` parameter
-    """
-    image = load_img(image_path, target_size=(lc.SIZE, lc.SIZE))
-    return np.expand_dims(preprocess_input(img_to_array(image)), axis=0)
+# def prepare_image(image_path):
+#     """
+#     Loads image from the given `image_path` parameter
+#     """
+#     image = load_img(image_path, target_size=(lc.SIZE, lc.SIZE))
+#     return np.expand_dims(preprocess_input(img_to_array(image)), axis=0)
 
 
 def make_prediction(filename):
@@ -33,7 +33,7 @@ def make_prediction(filename):
     """
     print('Filename is ', filename)
     full_path = os.path.join(lc.OUTPUT_DIR, filename)
-    test_data = prepare_image(full_path)
+#     test_data = prepare_image(full_path)
 #     predictions = model.predict(test_data)
 #     print(predictions)
     predictions = "connector"
