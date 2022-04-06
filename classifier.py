@@ -1,5 +1,5 @@
 import os
-import tensorflow as tf
+# import tensorflow as tf
 import numpy as np
 import local_config as lc
 # from tensorflow.keras.applications.resnet50 import preprocess_input
