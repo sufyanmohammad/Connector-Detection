@@ -17,6 +17,10 @@ app = Flask(__name__)
 Bootstrap(app)
 app.config['UPLOAD_FOLDER'] = lc.OUTPUT_DIR
 
+@app.route('/')
+def man():
+    return render_template('index.html')
+
 
 @app.route('/', methods=['GET', 'POST'])
 def upload_file():
